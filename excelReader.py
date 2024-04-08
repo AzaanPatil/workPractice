@@ -1,6 +1,9 @@
 import os
 import sys
+import openpyxl
 import pandas as pd
+
+print("Program launched")
 
 print("Command line arguments", sys.argv) # prints every parameter in sys.argv
 
