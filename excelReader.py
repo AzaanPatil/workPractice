@@ -23,6 +23,7 @@ num_parms = total_cmd_parms - 1 # Calculates the amount of parameters in sys.arg
 fileName = sys.argv[1] # Shows the index of where the file name is
 fileExists = os.path.exists(fileName) # Checks whether file exists
 myExcel = PrettyTable()
+myExcel.title = [fileName]
 myExcel.field_names = ["Name", "Visibility"]
 
 if fileExists: # Function for if the file is found
