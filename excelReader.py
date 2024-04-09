@@ -2,6 +2,8 @@ import os
 import sys
 import openpyxl
 import pandas as pd
+import prettytable
+from prettytable import PrettyTable
 
 print("Program launched successfully")
 
@@ -20,6 +22,8 @@ num_parms = total_cmd_parms - 1 # Calculates the amount of parameters in sys.arg
 
 fileName = sys.argv[1] # Shows the index of where the file name is
 fileExists = os.path.exists(fileName) # Checks whether file exists
+myExcel = PrettyTable()
+myExcel.field_names = ["Name", "Visibility"]
 
 if fileExists: # Function for if the file is found
     print("file: ", fileName, "exists")
@@ -32,12 +36,12 @@ if fileExists: # Function for if the file is found
     numHiddenSheets = 0
     numVisibleSheets = 0
     for sheet in sheets: # function that checks whether sheet is hidden or visible
-        print(sheet.title, sheet.sheet_state)
+        myExcel.add_row([sheet.title, sheet.sheet_state]) # function that creates a table which displays name and visibility of sheets
         if sheet.sheet_state == "hidden":
             numHiddenSheets += 1
         else:
             numVisibleSheets += 1
-    print("There are ", numVisibleSheets ," visible sheets and ", numHiddenSheets ," hidden sheets in ", fileName, ".")
+    print(myExcel)
 else:
     print("Error: file ", fileName ," does not exist") # function for if file is not found
 
