@@ -4,15 +4,21 @@ import openpyxl
 import xlsxwriter
 import pandas as pd
 
+DM = {'Name': [], 'Age': [], 'Salary': []}
+VCA = {'Name': [], 'Age': [], 'Salary': []}
+ipAddresses = {'Computer': [], 'Phone': [], 'Laptop': []}
+Cover = {'Name': [], 'Age': [], 'Salary': []}
+vSP2K = {'Name': [], 'Age': [], 'Salary': []}
+GMS = {'Name': [], 'Age': [], 'Salary': []}
 
 fileName = "test2.xlsx"
 with pd.ExcelWriter(fileName) as writer:
-    df = pd.DataFrame()
-    df2 = pd.DataFrame()
-    df3 = pd.DataFrame()
-    df4 = pd.DataFrame()
-    df5 = pd.DataFrame()
-    df6 = pd.DataFrame()
+    df = pd.DataFrame(DM)
+    df2 = pd.DataFrame(VCA)
+    df3 = pd.DataFrame(ipAddresses)
+    df4 = pd.DataFrame(Cover)
+    df5 = pd.DataFrame(vSP2K)
+    df6 = pd.DataFrame(GMS)
     df.to_excel(writer, sheet_name='DM')
     df2.to_excel(writer, sheet_name='VCA')
     df3.to_excel(writer, sheet_name='IP Addresses')
