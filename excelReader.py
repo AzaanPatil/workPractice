@@ -6,15 +6,20 @@ import prettytable
 from prettytable import PrettyTable
 
 print("Program launched successfully")
+os.system('pause')
 
 print("Welcome to ExcelReader")
+os.system('pause')
 
 print("Command line arguments", sys.argv) # prints every parameter in sys.argv
+os.system('pause')
 
 print("Name of program", sys.argv[0]) # prints specific index of parameter in sys.argv
+os.system('pause')
 
 for parm in sys.argv: # prints every single parameter of sys.argv in separate array
     print("parm = ", parm)
+    os.system('pause')
 
 total_cmd_parms = len(sys.argv) # Calculates the amount of parameters in sys.argv including the name of the program.
 
