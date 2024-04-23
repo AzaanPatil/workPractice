@@ -7,9 +7,9 @@ import pandas as pd
 DM = {'Name': [], 'Age': [], 'Salary': []}
 VCA = {'Name': [], 'Age': [], 'Salary': []}
 ipAddresses = {'Computer': [], 'Phone': [], 'Laptop': []}
-Cover = {'Name': [], 'Age': [], 'Salary': []}
-vSP2K = {'Name': [], 'Age': [], 'Salary': []}
-GMS = {'Name': [], 'Age': [], 'Salary': []}
+Cover = {'': [], '': [], 'Salary': []}
+vSP2K = {'': [], '': [], '': []}
+GMS = {'': [], '': [], 'Salary': []}
 
 fileName = "test2.xlsx"
 with pd.ExcelWriter(fileName) as writer:
